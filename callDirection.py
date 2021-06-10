@@ -74,8 +74,10 @@ if call.lower() == 'service':
 
     # Update - Switch to direct call
     elif responseService.lower() == 'update':
-        print('No problem, I will connect you to your service advisor')
         call = 'direct'
+
+    else:
+        print('Let me take down your name and number, and we will get back to you shortly')
 
     # TODO
     # Warranty - Switch to direct call, if we even do those?
@@ -112,14 +114,16 @@ if call.lower() == 'direct':
 
     else:
         print('Direct is unavailable..\nPress 1 to record a voicemail\nPress 2 to be connected to the next available department member')
+        # Will need to ask Norman about ring all features
+        
         
 #Lunch mode
-        #Service press 1, Sales press 2, Parts press 3
-        #Ring all
-        #Or just have someone on the desk
+        # Service press 1, Sales press 2, Parts press 3
+        # Ring all
+        # Or just have someone on the desk really
 
 #After 5pm
-        #Ring all sales
+        # Ring all sales
 
 #After close
-        #I think is already handled, but let's find out
+        # I think is already handled, but let's find out
