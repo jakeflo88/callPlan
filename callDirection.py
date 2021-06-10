@@ -14,7 +14,7 @@ call = input()
 # Sales call
 if call.lower() ==  'sales':
 
-    print('Have you been speaking with someone already?\n')
+    print('\nHave you been speaking with someone already?')
 
     responseSales = input()
 
@@ -58,7 +58,6 @@ if call.lower() ==  'sales':
 # Service call
 if call.lower() == 'service':
     
-# TODO
     # Appointment (common) - Amber/Mandy)?
     print('\nAre you looking to book or change an appointment?')
 
@@ -67,17 +66,21 @@ if call.lower() == 'service':
     if responseService.lower() == 'yes':
         print('\nNo problem, I will connect you to the booking department\n')
         call = 'direct'
+
     # Breakdown (rare) - Place on hold - Go find someone to pickup!
     elif responseService.lower() == 'breakdown':
-        print('Please hold for a moment while I find someone to help you immediately')
+        print('\nPlease hold for a moment while I find someone to help you immediately')
         print('***Place on hold and find someone to pick up the phone***')
+
     # Update - Switch to direct call
     elif responseService.lower() == 'update':
         print('No problem, I will connect you to your service advisor')
         call = 'direct'
-    # Warranty - Switch to direct call
+
+    # TODO
+    # Warranty - Switch to direct call, if we even do those?
     # General inquiry - Ring all - Voicemail or flip back to reception?
-    # Perhaps these can be divided into direct calls and appointments?
+    # Perhaps all of these service calls can be divided into direct calls and appointments?
 
 #############################################
 
@@ -93,7 +96,7 @@ if call.lower() == 'parts':
         print('Good morning, parts department speaking!')
 
     else:
-        print('Our parts department are currently assisting other customers/nPress 1 to leave a message that will be responded to ASAP')
+        print('Our parts department are currently assisting other customers.\nPlease leave a message that will be responded to ASAP')
         
 
 
