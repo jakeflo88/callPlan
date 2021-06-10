@@ -14,23 +14,32 @@ call = input()
 # Sales call
 if call.lower() ==  'sales':
 
-    print('Thanks, please hold for just a moment and I will see who is available\n')
-    print('***Places on HOLD***')
-    
-    print('***Announce on PA or just look to see***\n')
+    print('Have you been speaking with someone already?\n')
 
-    availableSales = random.randint(0, 9)
+    responseSales = input()
 
-    if availableSales >= 5:
-        print('Jake is available\n')
-        print('***Call is sent to Jake***\n\n')
-
-        print('Good morning, Thistle Hyundai, Jake speaking!')
-        
+    if responseSales.lower() == 'yes':
+        call = 'direct'
 
     else:
-        print('No one is available\n')
-        print('*Takes name and number, will call you back*')
+
+        print('Thanks, please hold for just a moment and I will see who is available\n')
+        print('***Places on HOLD***')
+        
+        print('***Announce on PA or just look to see***\n')
+
+        availableSales = random.randint(0, 9)
+
+        if availableSales >= 5:
+            print('Jake is available\n')
+            print('***Call is sent to Jake***\n\n')
+
+            print('Good morning, Thistle Hyundai, Jake speaking!')
+            
+
+        else:
+            print('No one is available\n')
+            print('*Takes name and number, will call you back*')
 
 # THIS IS WHAT IS HAPPENING NOW   
 #    print('Sales phone, "Ring ring Sales ring.."\n')
@@ -47,14 +56,28 @@ if call.lower() ==  'sales':
 
 
 # Service call
-
+if call.lower() == 'service':
+    
 # TODO
-# Appointment (common) - Amber/Mandy)?
-# Breakdown (rare) - Place on hold - Go find someone to pickup!
-# Update - Switch to direct call
-# Warranty - Switch to direct call
-# General inquiry - Ring all - Voicemail or flip back to reception?
-# Perhaps these can be divided into direct calls and appointments?
+    # Appointment (common) - Amber/Mandy)?
+    print('\nAre you looking to book or change an appointment?')
+
+    responseService = input()
+
+    if responseService.lower() == 'yes':
+        print('\nNo problem, I will connect you to the booking department\n')
+        call = 'direct'
+    # Breakdown (rare) - Place on hold - Go find someone to pickup!
+    elif responseService.lower() == 'breakdown':
+        print('Please hold for a moment while I find someone to help you immediately')
+        print('***Place on hold and find someone to pick up the phone***')
+    # Update - Switch to direct call
+    elif responseService.lower() == 'update':
+        print('No problem, I will connect you to your service advisor')
+        call = 'direct'
+    # Warranty - Switch to direct call
+    # General inquiry - Ring all - Voicemail or flip back to reception?
+    # Perhaps these can be divided into direct calls and appointments?
 
 #############################################
 
@@ -92,7 +115,7 @@ if call.lower() == 'direct':
         #Ring all
         #Or just have someone on the desk
 
-#After 5
+#After 5pm
         #Ring all sales
 
 #After close
