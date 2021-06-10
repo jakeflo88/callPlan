@@ -12,9 +12,9 @@ call = input()
 
 
 # Sales call
-if call ==  'sales':
+if call.lower() ==  'sales':
 
-    print('Thanks, I will connect you to the sales department\n')
+    print('Thanks, please hold for just a moment and I will see who is available\n')
     print('***Places on HOLD***')
     
     print('***Announce on PA or just look to see***\n')
@@ -49,18 +49,18 @@ if call ==  'sales':
 # Service call
 
 # TODO
-# Appointments (common) - Amber/Mandy)?
-# Breakdowns (rare) - Place on hold - Go find someone to pickup
+# Appointment (common) - Amber/Mandy)?
+# Breakdown (rare) - Place on hold - Go find someone to pickup!
 # Update - Switch to direct call
 # Warranty - Switch to direct call
-# General inquiry - Ring all - Voicemail or flip back to reception
+# General inquiry - Ring all - Voicemail or flip back to reception?
 # Perhaps these can be divided into direct calls and appointments?
 
 #############################################
 
 
 # Parts
-if call == 'parts':
+if call.lower() == 'parts':
 
     print('Thanks, I will connect you to the parts department\n')
 
@@ -75,7 +75,7 @@ if call == 'parts':
 
 
 # Direct call
-if call == 'direct':
+if call.lower() == 'direct':
 
     print('Thanks, I will connect you directly\n')
 
