@@ -80,9 +80,9 @@ if call.lower() == 'service':
         print('Let me take down your name and number, and we will get back to you shortly')
 
     # TODO
-    # Warranty - Switch to direct call, if we even do those?
-    # General inquiry - Ring all - Voicemail or flip back to reception?
+    # General inquiry - Ring all? - Voicemail? - or flip back to reception?
     # Perhaps all of these service calls can be divided into direct calls and appointments?
+    # ^UPDATE generally yes
 
 #############################################
 
@@ -105,7 +105,7 @@ if call.lower() == 'parts':
 # Direct call
 if call.lower() == 'direct':
 
-    print('\nThanks, I will connect you directly..\n')
+    print('\nConnecting you directly..\n')
 
     availableDirect = random.randint(0, 9)
 
