@@ -90,7 +90,7 @@ if call.lower() == 'service':
 # Parts
 if call.lower() == 'parts':
 
-    print('Thanks, I will connect you to the parts department\n')
+    print('\nThanks, I will connect you to the parts department..\n')
 
     availableParts = random.randint(0, 9)
 
@@ -105,7 +105,7 @@ if call.lower() == 'parts':
 # Direct call
 if call.lower() == 'direct':
 
-    print('Thanks, I will connect you directly\n')
+    print('\nThanks, I will connect you directly..\n')
 
     availableDirect = random.randint(0, 9)
 
