@@ -1,4 +1,10 @@
 # FOR DIRECTING CALL TRAFFIC
+
+# TODO
+# Go through automated call system after hours and integrate
+# Remove random chance and change to directions
+# Eventually set up more accurate time-based random chance
+
 import random
 
 
