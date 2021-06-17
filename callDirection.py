@@ -1,11 +1,8 @@
 # FOR DIRECTING CALL TRAFFIC
 
 # TODO
-# Go through automated call system after hours and integrate
-# Remove random chance and change to directions
-# Eventually set up more accurate time-based random chance
+# Accurate time-based random chance would be fun and cool but not necessary for now
 
-import random
 
 
 # Call comes in, answer?
@@ -15,6 +12,7 @@ call = input()
 # Automated system
 if call.lower() == 'n':
 
+    # for this part option 1 is redundant
     print('''Welcome to Thistle Hyundai, for:\n 
     Reception - Press 1\n
     Service - Press 2\n
@@ -55,6 +53,7 @@ if call.lower() == 'n':
     elif choice == '3':
         print('Connect to parts')
 
+    # for general sales inquiries press 1?
     elif choice == '4':
         print('''Welcome to the sales department, for:\n
         Jeremy Watkins - Press 1\n
@@ -72,7 +71,7 @@ if call.lower() == 'n':
 elif call.lower() == 'y':
 
     # Good morning, Thistle Hyundai computer speaking, how can I direct your call?
-    print('Good morning, Thistle Hyundai, this is computer speaking.\n\nHow can I direct your call?')
+    print('Good morning, Thistle Hyundai, this is reception speaking.\n\nHow can I direct your call?')
 
     call = input()
 
@@ -91,33 +90,20 @@ elif call.lower() == 'y':
             print('Thanks, please hold for just a moment and I will see who is available\n')
             print('***Places on HOLD***')
             
-            print('***Announce on PA or just look to see***\n')
+            print('***Announce on PA or just look to see***')
 
-            availableSales = random.randint(0, 9)
+            availableSales = input()
 
-            if availableSales >= 5:
+            if availableSales == 'y':
                 print('Jake is available\n')
                 print('***Call is sent to Jake***\n\n')
 
                 print('Good morning, Thistle Hyundai, Jake speaking!')
                 
 
-            else:
+            elif availableSales == 'n':
                 print('No one is available\n')
                 print('*Takes name and number, will call you back*')
-
-    # THIS IS WHAT IS HAPPENING NOW   
-    #    print('Sales phone, "Ring ring Sales ring.."\n')
-    #
-    #    pickup = random.randint(0, 9)
-    #
-    #   if pickup >= 5:
-    #       print('Hello! Would you like to buy a car?')
-    #
-    #   else:
-    #       print('No answer -> goes to directly to voicemail.\n')
-
-    #############################################
 
 
     # Service call
@@ -144,25 +130,22 @@ elif call.lower() == 'y':
         else:
             print('Let me take down your name and number, and we will get back to you shortly')
 
-        # TODO
-        # General inquiry - Ring all? - Voicemail? - or flip back to reception?
         # Perhaps all of these service calls can be divided into direct calls and appointments?
         # ^UPDATE generally yes
 
-    #############################################
 
 
     # Parts
     if call.lower() == 'parts':
 
-        print('\nThanks, I will connect you to the parts department..\n')
+        print('\nThanks, I will connect you to the parts department..')
 
-        availableParts = random.randint(0, 9)
+        availableParts = input()
 
-        if availableParts >= 5:
+        if availableParts == 'y':
             print('Good morning, parts department speaking!')
 
-        else:
+        elif availableParts == 'n':
             print('Our parts department are currently assisting other customers.\nPlease leave a message that will be responded to ASAP')
             
 
@@ -170,25 +153,18 @@ elif call.lower() == 'y':
     # Direct call
     if call.lower() == 'direct':
 
-        print('\nConnecting you directly..\n')
+        print('\nConnecting you directly..')
 
-        availableDirect = random.randint(0, 9)
+        availableDirect = input()
 
-        if availableDirect >= 5:
+        if availableDirect == 'y':
             print('Hello, you have reached me directly!')
 
-        else:
-            print('Direct is unavailable..\nPress 1 to record a voicemail\nPress 2 to be connected to the next available department member')
-            # Will need to ask Norman about ring all features
+        elif availableDirect == 'n':
+            print('Hi, you have reached my personal voicemail')
         
         
 #Lunchtime
-        #just have someone on the desk really
-
-#After 5pm
-        # Ring all sales
-
-#After close
-        # I think is already handled, but let's find out
+        # just have someone on the desk really
 
 
