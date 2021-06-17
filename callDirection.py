@@ -26,7 +26,7 @@ if call.lower() == 'n':
         print('Reception phone is now ringing..')
 
     elif choice == '2':
-        print('''Welcome to the Servive Department:\n
+        print('''Welcome to the Service Department:\n
         To book an appointment - Press 1\n
         To check on the status of your vehicle - Press 2\n
         Questions about warranty - Press 3\n
