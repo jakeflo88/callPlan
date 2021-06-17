@@ -1,9 +1,9 @@
 # FOR DIRECTING CALL TRAFFIC
 
 # TODO
-# Accurate time-based random chance would be fun and cool but not necessary for now
 # Implement input validation properly
 # Add loopback to top for repeated call processing
+# Accurate time-based random chance would be fun and cool but not necessary for now
 
 
 
@@ -116,7 +116,7 @@ elif call.lower() == 'y':
         
         # Appointment (common) - Amber/Mandy)?
         print('\nAre you looking to book or change an appointment?')
-        print('<enter y for yes/ enter update for update/ enter breakdown for a breakdown>')
+        print('<Enter y for yes/ enter update for update/ enter breakdown for a breakdown>')
 
         responseService = input()
 
