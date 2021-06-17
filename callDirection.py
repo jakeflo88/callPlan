@@ -2,11 +2,14 @@
 
 # TODO
 # Accurate time-based random chance would be fun and cool but not necessary for now
+# Implement input validation properly
+# Add loopback to top for repeated call processing
 
 
 
 # Call comes in, answer?
 print('Ring ring..')
+print('<Enter y for reception/ or n for the automated system>')
 call = input()
 
 # Automated system
@@ -72,6 +75,7 @@ elif call.lower() == 'y':
 
     # Good morning, Thistle Hyundai computer speaking, how can I direct your call?
     print('Good morning, Thistle Hyundai, this is reception speaking.\n\nHow can I direct your call?')
+    print('<Enter sales, service, parts, or direct>')
 
     call = input()
 
@@ -79,10 +83,11 @@ elif call.lower() == 'y':
     if call.lower() ==  'sales':
 
         print('\nHave you been speaking with someone already?')
+        print('<Enter y for yes/ n for no>')
 
         responseSales = input()
 
-        if responseSales.lower() == 'yes':
+        if responseSales.lower() == 'y':
             call = 'direct'
 
         else:
@@ -111,10 +116,11 @@ elif call.lower() == 'y':
         
         # Appointment (common) - Amber/Mandy)?
         print('\nAre you looking to book or change an appointment?')
+        print('<enter y for yes/ enter update for update/ enter breakdown for a breakdown>')
 
         responseService = input()
 
-        if responseService.lower() == 'yes':
+        if responseService.lower() == 'y':
             print('\nNo problem, I will connect you to the booking department\n')
             call = 'direct'
 
@@ -139,6 +145,7 @@ elif call.lower() == 'y':
     if call.lower() == 'parts':
 
         print('\nThanks, I will connect you to the parts department..')
+        print('<Enter y for pickup/ n for no answer>')
 
         availableParts = input()
 
@@ -154,6 +161,7 @@ elif call.lower() == 'y':
     if call.lower() == 'direct':
 
         print('\nConnecting you directly..')
+        print('<Enter y for pickup/ n for no answer>')
 
         availableDirect = input()
 
@@ -166,5 +174,3 @@ elif call.lower() == 'y':
         
 #Lunchtime
         # just have someone on the desk really
-
-
